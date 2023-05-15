@@ -1,0 +1,12 @@
+.pagination {
+    height: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+
+.pagination-onePage {
+    
+}
