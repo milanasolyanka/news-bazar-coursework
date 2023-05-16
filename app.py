@@ -7,7 +7,7 @@ CORS(app)
 
 @app.route('/news', methods=['GET'])
 def get_news():
-    api_key = '238131f7f6664e22b6d625ac06847c72'  # Вставьте ваш API-ключ здесь
+    api_key = '238131f7f6664e22b6d625ac06847c72'
     url = 'https://newsapi.org/v2/top-headlines'
     parameters = {
         'country': 'us',
