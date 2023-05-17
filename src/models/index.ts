@@ -33,3 +33,7 @@ export interface IInput {
   value: string;
   //func
 }
+
+export interface IHeader {
+  
+}

@@ -6,6 +6,7 @@ import { INewsList } from './models';
 import { getNews } from './api';
 import { count } from 'console';
 import { Pagination } from './components/Pagination';
+import { Header } from './components/Header';
 
 function App() {
   const [value, setValue] = useState<string>('');
@@ -29,6 +30,7 @@ function App() {
 
   return (
     <div className="mainPage">
+      <Header />
       <FormField />
       {news !== undefined && (
         <div>

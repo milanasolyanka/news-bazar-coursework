@@ -1,6 +1,7 @@
 .mainPage {
-
-  background-color: #F6F1EC;
+  background-color: #f6f1ec;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
