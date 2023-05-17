@@ -17,7 +17,7 @@ export const NewsList: React.FC<INewsList> = ({
           ))}
         </div>
       ) : (
-        <div>Произошла ошибка.</div>
+        <div>При получении новостей произошла ошибка.</div>
       )}
     </div>
   );
