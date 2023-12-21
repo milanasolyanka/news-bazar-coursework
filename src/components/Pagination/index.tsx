@@ -9,9 +9,11 @@ interface IPagination {
 
 export const Pagination: React.FC<IPagination> = ({ pages, changePage }) => {
   return (
-    <div className='pagination'>
+    <div className="pagination">
       {pages.map((page) => (
-        <span className='pagination-onePage' onClick={() => changePage(page)}>{page}</span>
+        <span className="pagination-onePage" onClick={() => changePage(page)}>
+          <div className="onePage-pageNumber">{page}</div>
+        </span>
       ))}
     </div>
   );

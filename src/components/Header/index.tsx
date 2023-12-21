@@ -1,6 +1,9 @@
 import React from 'react';
-import './css/main.css';
+import './header.css';
 import { IHeader } from '../../models';
+import avatar from '../../assets/avatar.jpg';
+import { ReactComponent as Logo } from '../../assets/search_icon.svg';
+import { HeaderButton } from '../UI/HeaderButton';
 
 export const Header: React.FC<IHeader> = ({}) => {
   function refreshPage() {
@@ -8,51 +11,41 @@ export const Header: React.FC<IHeader> = ({}) => {
   }
 
   return (
-    <div className="v30_256">
-      <div className="v30_4"></div>
-      <div className="v30_5"></div>
-      <div className="v33_7">
-        <div className="v30_6"></div>
-        <div className="name"></div>
-        <div className="search_alt"></div>
-        <span className="v30_7">Поиск тем, мест и источников</span>
-      </div>
-
-      <div className="v32_257" onClick={refreshPage}>
-        News<span>Bazar</span>
-      </div>
-      <div className="v30_9">
-        <div className="line"></div>
-        <div className="name"></div>
-        <div className="v31_2">
-          <div className="v30_16"></div>
-          <span className="v30_24">Спорт</span>
+    <div className="navbar">
+      <div className="navbar-content">
+        <div className="contentTop">
+          <div className="contentTop__title">NewsBazar</div>
+          <div className="contentTop__search">
+            <Logo />
+            <input
+              className="search__input"
+              type="text"
+              placeholder="Ключевые слова..."
+            />
+          </div>
+          <img className="avatar__img" src={avatar} alt="avatar" />
         </div>
-        <div className="v31_3">
-          <div className="v30_15"></div>
-          <span className="v30_23">Наука</span>
-        </div>
-        <div className="v31_4">
-          <div className="v30_14"></div>
-          <span className="v30_22">Политика</span>
-        </div>
-        <div className="v31_5">
-          <div className="v30_13"></div>
-          <span className="v30_21">В мире</span>
-        </div>
-        <div className="v31_8">
-          <div className="v30_11"></div>
-          <span className="v30_12">Закладки</span>
-        </div>
-        <div className="v31_6">
-          <div className="v30_10"></div>
-          <span className="v30_20">По категориям</span>
-        </div>
-        <div className="v31_7" onClick={refreshPage}>
-          <div className="v30_17"></div>
-          <span className="v30_19">Главная</span>
+        <div className="contentBottom">
+          <div className="contentBottom__left">
+            <HeaderButton value="Главная" />
+            <HeaderButton value="По категориям" />
+            <HeaderButton value="Закладки" />
+          </div>
+          <div className="contentBottom__right">
+            <HeaderButton value="В мире" />
+            <HeaderButton value="Политика" />
+            <HeaderButton value="Наука" />
+            <HeaderButton value="Спорт" />
+          </div>
         </div>
       </div>
     </div>
   );
 };
+
+{
+  /* <div className="v31_7" onClick={refreshPage}>
+  <div className="v30_17"></div>
+  <span className="v30_19">Главная</span>
+</div>; */
+}

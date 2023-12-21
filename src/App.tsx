@@ -41,6 +41,7 @@ function App() {
           />
         </div>
       )}
+      <Pagination pages={pages} changePage={setCurrentPage} />
     </div>
   );
 }

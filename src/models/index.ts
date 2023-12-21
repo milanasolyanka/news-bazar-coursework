@@ -34,6 +34,9 @@ export interface IInput {
   //func
 }
 
-export interface IHeader {
-  
+export interface IHeader {}
+
+export interface IHeaderButton {
+  value: string;
+  //func
 }
