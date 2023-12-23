@@ -26,6 +26,7 @@
   color: #2a6661;
   margin-left: 50px;
   cursor: pointer;
+  text-decoration:none;
 }
 
 .contentTop__search {

@@ -1,5 +1,7 @@
 import React from 'react';
 import './header.css';
+import { Link } from 'react-router-dom';
+
 import { IHeader } from '../../models';
 import avatar from '../../assets/avatar.jpg';
 import { ReactComponent as Logo } from '../../assets/search_icon.svg';
@@ -14,7 +16,7 @@ export const Header: React.FC<IHeader> = ({}) => {
     <div className="navbar">
       <div className="navbar-content">
         <div className="contentTop">
-          <div className="contentTop__title">NewsBazar</div>
+          <Link to="/news/us" className="contentTop__title">NewsBazar</Link>
           <div className="contentTop__search">
             <Logo />
             <input
