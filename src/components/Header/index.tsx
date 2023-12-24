@@ -6,6 +6,12 @@ import { IHeader } from '../../models';
 import avatar from '../../assets/avatar.jpg';
 import { ReactComponent as Logo } from '../../assets/search_icon.svg';
 import { HeaderButton } from '../UI/HeaderButton';
+import { HeaderDropdown } from '../UI/HeaderDropdown';
+import {
+  dropdownItemsCountry,
+  dropdownItemsTime,
+  dropdownItemsCategory,
+} from './dropdownContent';
 
 export const Header: React.FC<IHeader> = ({}) => {
   function refreshPage() {
@@ -16,7 +22,9 @@ export const Header: React.FC<IHeader> = ({}) => {
     <div className="navbar">
       <div className="navbar-content">
         <div className="contentTop">
-          <Link to="/news/us" className="contentTop__title">NewsBazar</Link>
+          <Link to="/news/us" className="contentTop__title">
+            NewsBazar
+          </Link>
           <div className="contentTop__search">
             <Logo />
             <input
@@ -30,14 +38,17 @@ export const Header: React.FC<IHeader> = ({}) => {
         <div className="contentBottom">
           <div className="contentBottom__left">
             <HeaderButton value="Главная" />
-            <HeaderButton value="По категориям" />
             <HeaderButton value="Закладки" />
+            <HeaderButton value="Аккаунт" />
           </div>
           <div className="contentBottom__right">
-            <HeaderButton value="В мире" />
-            <HeaderButton value="Политика" />
-            <HeaderButton value="Наука" />
-            <HeaderButton value="Спорт" />
+            <HeaderDropdown value="По стране" items={dropdownItemsCountry} />
+            <HeaderDropdown
+              value="По категориям"
+              items={dropdownItemsCategory}
+            />
+            <HeaderDropdown value="По дате" items={dropdownItemsTime} />
+            <HeaderButton value="Текст" />
           </div>
         </div>
       </div>

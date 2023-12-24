@@ -40,3 +40,13 @@ export interface IHeaderButton {
   value: string;
   //func
 }
+
+export interface IHeaderDropdownItem {
+  href: string;
+  text: string;
+}
+
+export interface IHeaderDropdown {
+  value: string;
+  items: IHeaderDropdownItem[];
+}
